@@ -4,7 +4,7 @@ A standalone, single-page ledger of independent expenditures and outside money
 reported around Graham Platner's 2026 Maine U.S. Senate candidacy
 (October 2025 – July 8, 2026).
 
-**Live page:** https://daguilar0123.github.io/platner-campaign-money/
+**Live page:** https://daguilar0123.github.io/graham-platner-campaign-finance/
 
 ## What it contains
 - Every FEC Schedule E independent expenditure filed supporting or opposing
