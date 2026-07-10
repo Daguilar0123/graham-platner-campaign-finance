@@ -11,9 +11,13 @@
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://daguilar0123.github.io/graham-platner-campaign-finance/">
 <meta property="og:site_name" content="Graham Platner Campaign Finance Ledger">
-<meta property="og:image" content="https://daguilar0123.github.io/graham-platner-campaign-finance/social/og-1200x630.png">
+<meta property="og:image" content="https://daguilar0123.github.io/graham-platner-campaign-finance/social/ig-1080x1080.png">
+<meta property="og:image:width" content="1080">
+<meta property="og:image:height" content="1080">
+<meta property="og:image:alt" content="A grid of 35 squares — 34 red (each = $1 spent opposing Graham Platner) and 1 green ($1 supporting) — the 34-to-1 outside-spending ratio in the 2026 Maine U.S. Senate race.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://daguilar0123.github.io/graham-platner-campaign-finance/social/og-1200x630.png">
+<meta name="twitter:image" content="https://daguilar0123.github.io/graham-platner-campaign-finance/social/ig-1080x1080.png">
+<meta name="twitter:image:alt" content="A grid of 35 squares — 34 red (each = $1 opposing Graham Platner) and 1 green ($1 supporting) — the 34-to-1 outside-spending ratio.">
 <meta name="author" content="Daniel Ismael Aguilar">
 <meta name="copyright" content="© 2026 Daniel Ismael Aguilar">
 <meta name="keywords" content="Graham Platner, campaign finance, independent expenditures, Maine Senate 2026, FEC filings, super PAC, dark money, Pine Tree Results PAC, outside money">
@@ -185,6 +189,43 @@ dialog.fdlg::backdrop{background:rgba(10,12,14,.55);backdrop-filter:blur(2px)}
 .repocard svg{width:30px;height:30px;flex:none;fill:currentColor}
 .repocard .rc-t{font-weight:600;font-size:14.5px}
 .repocard .rc-s{font-size:12.5px;color:var(--muted)}
+
+/* ——— figures (embedded graphics) ——— */
+figure.fig{margin:26px 0;padding:0}
+figure.fig img{display:block;width:100%;height:auto;border:1px solid var(--hair);border-radius:4px;background:var(--surface)}
+figure.fig.tall{max-width:600px;margin-left:auto;margin-right:auto}
+figure.fig figcaption{font-size:12.5px;color:var(--muted);margin-top:8px;text-wrap:pretty}
+.gifframe{position:relative}
+.gifframe .looptag{position:absolute;top:10px;right:10px;font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;background:rgba(0,0,0,.55);color:#fff;padding:3px 8px;border-radius:20px}
+
+/* ——— share kit ——— */
+.sharekit{border:1px solid var(--hair-strong);border-radius:4px;background:var(--surface);padding:18px 20px;margin:20px 0}
+.sharekit h3{margin:0 0 4px}
+.sharekit .sk-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-top:16px}
+.sk-item{display:flex;flex-direction:column;gap:8px;border:1px solid var(--hair);border-radius:4px;padding:10px;background:var(--ground)}
+.sk-thumb{position:relative;display:block;width:100%;height:120px;padding:0;border:1px solid var(--hair);border-radius:3px;background:repeating-conic-gradient(var(--neu-soft) 0% 25%,transparent 0% 50%) 0 0/16px 16px,var(--surface);cursor:zoom-in;overflow:hidden}
+.sk-thumb img{width:100%;height:100%;object-fit:contain;padding:6px;display:block}
+.sk-thumb .ptag{position:absolute;inset:auto 6px 6px auto;font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;background:rgba(0,0,0,.6);color:#fff;padding:2px 6px;border-radius:20px;opacity:0;transition:opacity .15s}
+.sk-thumb:hover .ptag,.sk-thumb:focus-visible .ptag{opacity:1}
+.sk-thumb .gifbadge{position:absolute;inset:6px auto auto 6px;font-family:var(--mono);font-size:8.5px;letter-spacing:.06em;background:var(--bad);color:#fff;padding:2px 6px;border-radius:20px}
+.sk-meta{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sk-item .skname{font-family:var(--mono);font-size:10.5px;color:var(--ink);letter-spacing:.02em;font-weight:600}
+.sk-item .skdim{font-family:var(--mono);font-size:9.5px;color:var(--muted)}
+.sk-item a.skdl{font-family:var(--mono);font-size:11px;font-weight:600;text-align:center;padding:7px;border:1px solid var(--accent);border-radius:3px;color:var(--accent);text-decoration:none}
+.sk-item a.skdl:hover{background:var(--accent);color:var(--ground)}
+/* lightbox */
+dialog.lbox{border:none;border-radius:6px;background:var(--surface);color:var(--ink);max-width:min(920px,94vw);max-height:94vh;padding:0;overflow:hidden}
+dialog.lbox::backdrop{background:rgba(8,10,12,.78);backdrop-filter:blur(3px)}
+.lb-head{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:14px 18px;border-bottom:1px solid var(--hair)}
+.lb-head .lb-t{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
+.lb-close{font:inherit;background:none;border:1px solid var(--hair-strong);border-radius:3px;color:var(--muted);cursor:pointer;padding:5px 11px}
+.lb-close:hover{color:var(--ink);border-color:var(--muted)}
+.lb-stage{padding:16px;overflow:auto;max-height:calc(94vh - 128px);text-align:center;background:repeating-conic-gradient(var(--neu-soft) 0% 25%,transparent 0% 50%) 0 0/22px 22px,var(--ground)}
+.lb-stage img{max-width:100%;height:auto;border-radius:3px;box-shadow:0 6px 30px rgba(0,0,0,.3)}
+.lb-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 18px;border-top:1px solid var(--hair);flex-wrap:wrap}
+.lb-foot .lb-cap{font-size:12px;color:var(--muted);max-width:60ch;text-align:left}
+.lb-dl{font-family:var(--mono);font-size:12px;font-weight:600;padding:9px 18px;background:var(--accent);color:var(--ground);border-radius:3px;text-decoration:none;white-space:nowrap}
+.lb-dl:hover{opacity:.9;color:var(--ground)}
 
 /* ——— spotlight ——— */
 .vtag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;vertical-align:1px}
@@ -496,23 +537,11 @@ html:not(.js) .secnav{display:none}
 <p class="pullq reveal"><span class="pub">The spending is public.</span><br><span class="priv">The source isn't.</span></p>
 <div class="plain reveal"><strong>What "dark money" actually means here — no metaphors, just the rule.</strong> Everything in the table above is money a super PAC <em>spent</em>. The FEC requires every dollar of that to be reported, which is why this page can list it down to the cent, with receipts. And a super PAC must also name its donors. But here's the design of the system: when one of those donors is a 501(c)(4) "social welfare" nonprofit, the disclosure obligation ends at the nonprofit's name — because that kind of nonprofit is allowed to raise unlimited money without ever naming <em>its</em> donors. Walk the trail yourself:</div>
 
-<div class="vanish reveal" aria-label="Three steps of the money trail: two visible, one that legally ends">
-  <div class="vstep seen">
-    <div class="vcap">Step 1 · On the public record</div>
-    <div class="vt">Pine Tree Results PAC paid <b>$10.7M</b> to an ad firm to oppose a candidate. Filed with the FEC. You can read every receipt above.</div>
-  </div>
-  <div class="varrow">→</div>
-  <div class="vstep seen">
-    <div class="vcap">Step 2 · On the public record</div>
-    <div class="vt">A nonprofit called Stronger America, Inc. put <b>$3,000,000</b> into that PAC on Dec 29, 2025 — it's right there in the PAC's own FEC donor filings. A name and a number — so far, so visible.</div>
-  </div>
-  <div class="varrow">→</div>
-  <div class="vstep void">
-    <div class="vcap">Step 3 · The record ends here</div>
-    <div class="vq">?</div>
-    <div class="vt">Who gave the nonprofit the $3,000,000? <strong>No filing answers that. None exists.</strong> Not hidden in fine print — legally never written down for the public. This is the step the word "dark" refers to.</div>
-  </div>
-</div>
+<figure class="fig reveal gifframe" style="max-width:560px;margin-left:auto;margin-right:auto">
+  <span class="looptag">↻ loops</span>
+  <img src="social/trail-goes-dark-animated.gif" width="720" height="720" loading="lazy" alt="Animation walking the money trail in three steps. Step 1: Pine Tree Results PAC spent $10.7M opposing a candidate — filed with the FEC, every receipt on record. Step 2: a nonprofit, Stronger America Inc., gave that PAC $3,000,000 — named in the PAC's own donor ledger. Step 3 drops into a black void with a pulsing question mark: who gave the nonprofit the $3,000,000? No filing answers that — none is required. The trail goes dark.">
+  <figcaption><strong>Watch the trail go dark.</strong> Two steps are filed and on the record — the PAC's $10.7M in spending, and the nonprofit's $3,000,000 gift into it. The third step — who funded the nonprofit — drops into a void no filing will ever fill. That last step is what the word &ldquo;dark&rdquo; refers to. (Prefers-reduced-motion note: the same facts are in the paragraph above and the diagram below.)</figcaption>
+</figure>
 <p class="note reveal">This isn't a loophole someone found last year; it's how 501(c)(4) disclosure law works in every federal race. What makes it concrete here: for the largest spender in this race, the PAC's own FEC donor filings show both the visible donors and the two nonprofits where the trail stops — with donor-network reporting from The Nation and the Bangor Daily News filling in who runs those nonprofits. The diagram below maps that entire pipeline — <strong>click any name in it</strong> for what the public record shows about them, and exactly where it goes dark.</p>
 
 <div class="flow reveal" id="flow" role="group" aria-label="Interactive diagram of money flowing into Pine Tree Results PAC and out to ads — every box opens a detail card">
@@ -549,6 +578,11 @@ html:not(.js) .secnav{display:none}
   <p class="flow-info" id="flowinfo">Tap or click any box — a card opens with what the public record shows about it, and exactly where the trail stops.</p>
 </div>
 
+<figure class="fig tall reveal">
+  <img src="social/infographic-money-pipeline-1200x2260.png" width="1200" height="2260" loading="lazy" alt="Vertical infographic titled ‘Who paid for the $11 million spent against Graham Platner?’ Two columns feed into Pine Tree Results PAC: hidden-source money (Stronger America Inc. $3M and Lexington Fund $1M, whose own donors are never disclosed) and named money (Kenneth Griffin $2.5M, Stephen Schwarzman $2M, James Davis $1M, and others). The PAC (raised $16.1M) then pays SRCP Media $10,723,548 across six ad buys, each an ‘Oppose: Platner’ FEC filing.">
+  <figcaption>The whole pipeline in one image — save it or share it. Hidden-source nonprofits and named billionaires flow into Pine Tree Results PAC, which pays a single ad vendor to run six ‘Oppose Platner’ buys. Every figure traces to the FEC filings itemized above; grab this and the animations in the <a href="#share-kit">share kit</a> below.</figcaption>
+</figure>
+
 <nav class="secnav" aria-label="Section navigation">
   <button id="nav-top" title="Jump to top" aria-label="Jump to top">↥</button>
   <button id="nav-prev" title="Previous section" aria-label="Previous section">^</button>
@@ -582,6 +616,67 @@ html:not(.js) .secnav{display:none}
     </a>
   </div>
 </div>
+
+<section class="sharekit reveal" id="share-kit">
+  <h3 style="font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.6vw,22px)">Share the receipts</h3>
+  <p class="note">A little hub to load up on material. Every graphic is built from the public FEC record and free to repost — no permission needed. Click a thumbnail to preview it full-size, then download; or grab it straight from the button. Credit (© 2026 Daniel Ismael Aguilar · grownfromconcrete.org) travels embedded in every file.</p>
+  <div class="sk-grid">
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/ig-1080x1080.png" data-title="blocks · 1080×1080 PNG" data-dl="social/ig-1080x1080.png" data-cap="The 34-to-1 ratio as an honest unit grid: 34 red squares (each = $1 opposing Platner) and 1 green ($1 supporting). Square format — good for Instagram or as a link-preview card." aria-label="Preview the blocks graphic full-size">
+        <img src="social/ig-1080x1080.png" width="1080" height="1080" loading="lazy" alt="The 34-to-1 blocks grid: 34 red squares and one green square.">
+        <span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">blocks</span><span class="skdim">1080×1080</span></div>
+      <a class="skdl" href="social/ig-1080x1080.png" download>Download</a>
+    </div>
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/waffle-squares-animated.gif" data-title="blocks · animated GIF" data-dl="social/waffle-squares-animated.gif" data-cap="The blocks grid filling in one dollar at a time — the 34-to-1 ratio, animated. Loops. Great attached to a post on X, where GIFs autoplay." aria-label="Preview the animated blocks GIF full-size">
+        <img src="social/waffle-squares-animated.gif" width="720" height="720" loading="lazy" alt="Animated blocks grid filling in.">
+        <span class="gifbadge">GIF</span><span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">blocks, animated</span><span class="skdim">720×720</span></div>
+      <a class="skdl" href="social/waffle-squares-animated.gif" download>Download</a>
+    </div>
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/donut-97-animated.gif" data-title="97¢ donut · animated GIF" data-dl="social/donut-97-animated.gif" data-cap="The donut counting up to 97¢ — the share of opposition money that came from a single super PAC. Loops." aria-label="Preview the animated 97-cent donut GIF full-size">
+        <img src="social/donut-97-animated.gif" width="720" height="720" loading="lazy" alt="Animated 97-cent donut chart.">
+        <span class="gifbadge">GIF</span><span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">97¢ donut</span><span class="skdim">720×720</span></div>
+      <a class="skdl" href="social/donut-97-animated.gif" download>Download</a>
+    </div>
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/trail-goes-dark-animated.gif" data-title="trail goes dark · animated GIF" data-dl="social/trail-goes-dark-animated.gif" data-cap="&ldquo;The spending is public. The source isn't.&rdquo; Two filed steps, then the drop into the void no filing fills. Loops." aria-label="Preview the animated dark-money trail GIF full-size">
+        <img src="social/trail-goes-dark-animated.gif" width="720" height="720" loading="lazy" alt="Animated dark-money trail ending in a void.">
+        <span class="gifbadge">GIF</span><span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">trail goes dark</span><span class="skdim">720×720</span></div>
+      <a class="skdl" href="social/trail-goes-dark-animated.gif" download>Download</a>
+    </div>
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/infographic-money-pipeline-1200x2260.png" data-title="full pipeline · 1200×2260 PNG" data-dl="social/infographic-money-pipeline-1200x2260.png" data-cap="The whole money story in one tall image — hidden-source nonprofits and named billionaires into Pine Tree Results PAC, then $10.7M out to one ad vendor, plus the six receipts. Best for a long-form post or a printout." aria-label="Preview the full pipeline infographic full-size">
+        <img src="social/infographic-money-pipeline-1200x2260.png" width="1200" height="2260" loading="lazy" alt="Tall money-pipeline infographic.">
+        <span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">full pipeline</span><span class="skdim">1200×2260</span></div>
+      <a class="skdl" href="social/infographic-money-pipeline-1200x2260.png" download>Download</a>
+    </div>
+    <div class="sk-item">
+      <button class="sk-thumb" data-full="social/og-1200x630-donut.png" data-title="donut card · 1200×630 PNG" data-dl="social/og-1200x630-donut.png" data-cap="The landscape summary card: &ldquo;What Can $11 Million Buy?&rdquo; with the 97¢ donut. Correct shape for a link preview or a wide banner." aria-label="Preview the donut summary card full-size">
+        <img src="social/og-1200x630-donut.png" width="1200" height="630" loading="lazy" alt="Donut summary card, landscape.">
+        <span class="ptag">click to preview</span>
+      </button>
+      <div class="sk-meta"><span class="skname">donut card</span><span class="skdim">1200×630</span></div>
+      <a class="skdl" href="social/og-1200x630-donut.png" download>Download</a>
+    </div>
+  </div>
+</section>
+
+<dialog class="lbox" id="lightbox" aria-label="Image preview">
+  <div class="lb-head"><span class="lb-t" id="lb-title"></span><button class="lb-close" id="lb-close">close ✕</button></div>
+  <div class="lb-stage"><img id="lb-img" src="" alt=""></div>
+  <div class="lb-foot"><span class="lb-cap" id="lb-cap"></span><a class="lb-dl" id="lb-dl" href="" download>↓ Download</a></div>
+</dialog>
 
 <footer>This page records who spent what in the 2026 Maine U.S. Senate race regarding Graham Platner, from public FEC filings and cited press reporting. It is a spending ledger only; it draws no conclusions about any candidate, committee, or donor, and endorses no side of the race. Compiled July 9, 2026 — figures reflect filings available on that date; later amendments or filings may change totals. Live data: <a href="https://www.fec.gov/data/independent-expenditures/?data_type=processed&amp;candidate_id=S6ME00373">fec.gov independent expenditures for S6ME00373</a>.</footer>
 </div>
@@ -751,6 +846,28 @@ document.documentElement.classList.add("js");
         dpOpen.href="https://docquery.fec.gov/cgi-bin/fecimg/?"+card.getAttribute("data-fid");
         dpanel.classList.add("open");
         dpanel.scrollIntoView({block:"nearest",behavior:"smooth"});
+      });
+    });
+  }
+
+  // share-kit preview lightbox
+  var lb=document.getElementById("lightbox");
+  if(lb && typeof lb.showModal==="function"){
+    var lbImg=document.getElementById("lb-img"),lbTitle=document.getElementById("lb-title"),
+        lbCap=document.getElementById("lb-cap"),lbDl=document.getElementById("lb-dl");
+    document.getElementById("lb-close").addEventListener("click",function(){lb.close()});
+    lb.addEventListener("click",function(e){if(e.target===lb)lb.close()});
+    [].slice.call(document.querySelectorAll(".sk-thumb")).forEach(function(btn){
+      btn.addEventListener("click",function(){
+        var full=btn.getAttribute("data-full");
+        lbImg.src=full;
+        lbImg.alt=(btn.querySelector("img")||{}).alt||"";
+        lbTitle.textContent=btn.getAttribute("data-title")||"";
+        lbCap.innerHTML=btn.getAttribute("data-cap")||"";
+        lbDl.href=btn.getAttribute("data-dl")||full;
+        var name=(btn.getAttribute("data-dl")||full).split("/").pop();
+        lbDl.setAttribute("download",name);
+        lb.showModal();
       });
     });
   }
