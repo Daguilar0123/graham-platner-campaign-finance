@@ -287,6 +287,13 @@ dialog.fdlg::backdrop{background:rgba(10,12,14,.55);backdrop-filter:blur(2px)}
   .ibadge .dot{animation:ipulse 1.6s ease-in-out infinite}
   @keyframes ipulse{0%,100%{box-shadow:0 0 0 0 rgba(61,90,115,.5)}50%{box-shadow:0 0 0 6px rgba(61,90,115,0)}}
 }
+/* ——— section nav ——— */
+.secnav{position:fixed;right:14px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:6px;z-index:50}
+html:not(.js) .secnav{display:none}
+.secnav button{font-family:var(--mono);font-size:15px;line-height:1;width:38px;height:38px;display:flex;align-items:center;justify-content:center;background:var(--surface);color:var(--muted);border:1px solid var(--hair-strong);border-radius:3px;cursor:pointer;padding:0}
+.secnav button:hover{color:var(--ink);border-color:var(--accent)}
+@media(max-width:1120px){.secnav{right:8px;top:auto;bottom:90px;transform:none}}
+@media print{.secnav{display:none}}
 @media print{body{background:#fff;color:#000}.finwrap{overflow:visible}}
 </style>
 </head>
@@ -542,6 +549,13 @@ dialog.fdlg::backdrop{background:rgba(10,12,14,.55);backdrop-filter:blur(2px)}
   <p class="flow-info" id="flowinfo">Tap or click any box — a card opens with what the public record shows about it, and exactly where the trail stops.</p>
 </div>
 
+<nav class="secnav" aria-label="Section navigation">
+  <button id="nav-top" title="Jump to top" aria-label="Jump to top">↥</button>
+  <button id="nav-prev" title="Previous section" aria-label="Previous section">^</button>
+  <button id="nav-next" title="Next section" aria-label="Next section">v</button>
+  <button id="nav-bot" title="Jump to bottom" aria-label="Jump to bottom">↧</button>
+</nav>
+
 <dialog class="fdlg" id="fmodal" aria-labelledby="fmodal-title">
   <div class="fdlg-head"><h4 id="fmodal-title"></h4><button class="fdlg-close" id="fmodal-close">close ✕</button></div>
   <div class="fdlg-body" id="fmodal-body"></div>
@@ -693,6 +707,34 @@ document.documentElement.classList.add("js");
       var h=document.createElement("span");h.className="hint2";h.textContent="+ details";btn.appendChild(h);
     }
   });
+
+  // section up/down navigation
+  (function(){
+    var stops=[].slice.call(document.querySelectorAll("header, .ratio, h2, #platner-fec-filings, footer"));
+    var smooth=reduced?"auto":"smooth";
+    function posOf(el){return el.getBoundingClientRect().top+window.pageYOffset-16}
+    function go(y){window.scrollTo({top:y,behavior:smooth})}
+    function current(){
+      var y=window.pageYOffset+24,idx=-1;
+      for(var i=0;i<stops.length;i++){if(posOf(stops[i])<=y)idx=i;}
+      return idx;
+    }
+    document.getElementById("nav-top").addEventListener("click",function(){go(0)});
+    document.getElementById("nav-bot").addEventListener("click",function(){go(document.documentElement.scrollHeight)});
+    document.getElementById("nav-prev").addEventListener("click",function(){
+      var i=current();
+      if(i<=0){go(0);return}
+      // if we're well below the current stop, go to its start; else go to the previous one
+      var y=window.pageYOffset;
+      var target=(y-posOf(stops[i])>80)?i:i-1;
+      go(posOf(stops[target]));
+    });
+    document.getElementById("nav-next").addEventListener("click",function(){
+      var i=current();
+      if(i>=stops.length-1){go(document.documentElement.scrollHeight);return}
+      go(posOf(stops[i+1]));
+    });
+  })();
 
   // filing preview cards (committee spotlight)
   var dpanel=document.getElementById("docpanel");
