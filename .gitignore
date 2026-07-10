@@ -1,0 +1,13 @@
+# macOS Finder metadata
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor / OS cruft
+*~
+._*
+Thumbs.db
+
+# Local FEC pulls / scratch (not part of the published site)
+filings/
+*.tmp
