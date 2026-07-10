@@ -127,11 +127,165 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--hair-strong)
 .byline a.support{color:var(--accent);border-color:var(--accent)}
 .byline a.support:hover{color:var(--ink);border-color:var(--ink)}
 
+/* ——— repo line ——— */
+.repoline{font-size:13px;color:var(--muted);max-width:70ch;margin:14px 0 0;padding:10px 14px;border:1px dashed var(--hair-strong);border-radius:3px;background:var(--surface)}
+
+/* ——— filing buttons ——— */
+a.fbtn{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;letter-spacing:.04em;padding:6px 11px;border:1.5px solid var(--accent);border-radius:3px;color:var(--accent);text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}
+a.fbtn:hover{background:var(--accent);color:var(--ground)}
+
+/* ——— 97% donut ——— */
+.donutwrap{display:flex;gap:34px;align-items:center;justify-content:center;flex-wrap:wrap;margin:30px 0;padding:30px 20px;border:1px solid var(--hair);background:var(--surface);border-radius:3px}
+.donut{position:relative;width:min(320px,72vw);aspect-ratio:1;border-radius:50%;background:conic-gradient(var(--bad) 0 348.5deg,var(--neu-soft) 348.5deg 360deg);display:flex;align-items:center;justify-content:center}
+.donut::before{content:"";position:absolute;inset:22%;border-radius:50%;background:var(--surface)}
+.donut .dc{position:relative;text-align:center;font-family:var(--serif)}
+.donut .dc .pct{font-size:clamp(40px,8vw,58px);line-height:1;color:var(--bad);font-variant-numeric:tabular-nums}
+.donut .dc .dl{font-size:12.5px;font-family:var(--mono);color:var(--muted);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
+.donutlegend{max-width:34ch;font-size:14.5px;text-wrap:pretty}
+.donutlegend .row{display:flex;gap:9px;align-items:baseline;padding:7px 0;border-bottom:1px solid var(--hair)}
+.donutlegend .row:last-child{border-bottom:none}
+.donutlegend .sw{width:11px;height:11px;border-radius:2px;flex:none;transform:translateY(1px)}
+.donutlegend b{font-variant-numeric:tabular-nums}
+
+/* ——— the vanishing trail ——— */
+.pullq{font-family:var(--serif);font-size:clamp(26px,4.6vw,40px);line-height:1.15;text-align:center;margin:54px auto 8px;max-width:22ch;text-wrap:balance}
+.pullq .pub{color:var(--ink)}
+.pullq .priv{color:var(--muted);font-style:italic}
+.vanish{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;gap:10px;align-items:stretch;margin:26px 0;max-width:900px}
+@media(max-width:760px){.vanish{grid-template-columns:1fr}}
+.vstep{border:1px solid var(--hair-strong);border-radius:3px;padding:16px;background:var(--surface)}
+.vstep .vcap{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+.vstep.seen .vcap{color:var(--good)}
+.vstep.seen{border-color:var(--good)}
+.vstep .vt{font-size:14px}
+.vstep .vt b{font-variant-numeric:tabular-nums}
+.vstep.void{background:var(--ink);color:var(--ground);border:1px solid var(--ink);position:relative;overflow:hidden}
+:root[data-theme="dark"] .vstep.void,html .vstep.void{background:#0B0C0E;color:#8A8F98}
+.vstep.void .vcap{color:var(--bad)}
+.vstep.void .vq{font-family:var(--serif);font-size:44px;line-height:1;color:#E9E7E2;margin:2px 0 8px}
+.varrow{display:flex;align-items:center;justify-content:center;font-family:var(--mono);color:var(--muted);font-size:18px}
+@media(max-width:760px){.varrow{transform:rotate(90deg);padding:2px 0}}
+
+/* ——— modal ——— */
+dialog.fdlg{border:1px solid var(--hair-strong);border-radius:4px;background:var(--surface);color:var(--ink);max-width:min(560px,92vw);padding:0}
+dialog.fdlg::backdrop{background:rgba(10,12,14,.55);backdrop-filter:blur(2px)}
+.fdlg-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:18px 20px 0}
+.fdlg-head h4{margin:0;font-family:var(--serif);font-weight:400;font-size:20px}
+.fdlg-close{font:inherit;background:none;border:1px solid var(--hair-strong);border-radius:3px;color:var(--muted);cursor:pointer;padding:4px 10px}
+.fdlg-close:hover{color:var(--ink);border-color:var(--muted)}
+.fdlg-body{padding:12px 20px 20px;font-size:14px;line-height:1.6}
+.fdlg-body .kv{display:grid;grid-template-columns:auto 1fr;gap:6px 14px;margin:12px 0;font-size:13.5px}
+.fdlg-body .kv .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:2px}
+.fdlg-body .seen-line{color:var(--good)}
+.fdlg-body .stop-line{color:var(--bad);font-weight:600}
+
+/* ——— repo card ——— */
+.repocard{display:flex;gap:14px;align-items:center;border:1px solid var(--hair-strong);border-radius:4px;background:var(--surface);padding:16px 18px;margin-top:16px;text-decoration:none;color:var(--ink)}
+.repocard:hover{border-color:var(--accent)}
+.repocard svg{width:30px;height:30px;flex:none;fill:currentColor}
+.repocard .rc-t{font-weight:600;font-size:14.5px}
+.repocard .rc-s{font-size:12.5px;color:var(--muted)}
+
+/* ——— spotlight ——— */
+.vtag{display:inline-block;font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;padding:2px 7px;border-radius:2px;vertical-align:1px}
+.vtag.fec{background:var(--good-soft);color:var(--good)}
+.vtag.press{background:var(--warn-soft,#F5EEDF);color:#9A6A1B}
+:root{--warn-soft:#F5EEDF}
+@media (prefers-color-scheme: dark){:root{--warn-soft:#2F281B}}
+.kv2{display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:13.5px;margin:10px 0}
+.kv2 .k{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);padding-top:2px;white-space:nowrap}
+.kv2 b{font-variant-numeric:tabular-nums}
+.donorlist{margin:0;padding:0;list-style:none;font-size:13.5px}
+.donorlist li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-bottom:1px solid var(--hair)}
+.donorlist li:last-child{border-bottom:none}
+.donorlist .amt{font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap}
+.minis{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;margin:16px 0}
+.mini{border:1px solid var(--hair);border-radius:3px;background:var(--surface);padding:14px 16px;font-size:13.5px}
+.mini h4{margin:0 0 6px;font-family:var(--serif);font-weight:400;font-size:16px}
+.selfdesc{font-family:var(--serif);font-style:italic;font-size:15px;border-left:3px solid var(--hair-strong);padding:8px 14px;margin:12px 0;color:var(--muted)}
+
+/* ——— waffle: every dollar as a square ——— */
+.waffle{margin:36px auto 0;max-width:620px}
+.wtitle{text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.wgrid{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}
+.wcell{aspect-ratio:1.35;background:var(--bad);border-radius:3px}
+.wcell.sup{background:var(--good)}
+.wlabels{display:flex;justify-content:space-between;gap:10px;margin-top:10px;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;flex-wrap:wrap}
+.wlabels .o{color:var(--bad)}.wlabels .s{color:var(--good)}
+
+/* ——— interactive badge ——— */
+.ibadge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:20px;padding:6px 14px;margin:2px 0 14px}
+.ibadge .dot{width:8px;height:8px;border-radius:50%;background:var(--accent);flex:none}
+.fnode:not(.mystery) .hint2{display:block;font-family:var(--mono);font-size:9px;letter-spacing:.06em;color:var(--accent);margin-top:4px;text-transform:uppercase}
+
+/* ——— filing preview cards ——— */
+.docstrip{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+.doccard{font:inherit;position:relative;background:var(--ground);border:1px solid var(--hair-strong);border-radius:2px;padding:10px 12px 8px;cursor:pointer;text-align:left;min-width:118px}
+.doccard::before{content:"";position:absolute;top:0;right:0;border-style:solid;border-width:0 14px 14px 0;border-color:var(--hair-strong) var(--surface)}
+.doccard:hover{border-color:var(--accent)}
+.doccard.active{outline:2px solid var(--accent);outline-offset:1px}
+.doccard .dt{font-family:var(--mono);font-size:10px;color:var(--muted)}
+.doccard .da{font-family:var(--mono);font-size:12.5px;font-weight:600;color:var(--bad);font-variant-numeric:tabular-nums}
+.doccard .dk{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-top:4px}
+.docpanel{display:none;border:1px solid var(--accent);border-radius:3px;background:var(--ground);padding:16px 18px;margin:10px 0;font-size:13.5px}
+.docpanel.open{display:block}
+.docpanel .dp-head{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);border-bottom:1px dashed var(--hair-strong);padding-bottom:8px;margin-bottom:10px}
+.docpanel .kv2{margin:8px 0}
+.docpanel .openbtn{display:inline-block;margin-top:10px;font-family:var(--mono);font-size:12px;font-weight:600;padding:9px 16px;background:var(--accent);color:var(--ground);border-radius:3px;text-decoration:none}
+.docpanel .openbtn:hover{opacity:.88;color:var(--ground)}
+
+/* ——— plain-English explainer boxes ——— */
+.plain{border-left:3px solid var(--accent);background:var(--surface);padding:12px 16px;margin:16px 0;font-size:14.5px;max-width:76ch;text-wrap:pretty;border-radius:0 3px 3px 0}
+.plain b{font-variant-numeric:tabular-nums}
+
+/* ——— money-flow diagram ——— */
+.flow{margin:26px 0 8px;border:1px solid var(--hair);background:var(--surface);border-radius:3px;padding:26px 22px 18px}
+.flow-cap{font-family:var(--mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;text-align:center}
+.flow-tier{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:680px){.flow-tier{grid-template-columns:1fr}}
+.flow-group{border:1px dashed var(--hair-strong);border-radius:3px;padding:14px;display:flex;flex-direction:column;gap:8px;align-items:center}
+.flow-group.named{border-style:solid}
+.fchips{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.fnode{font:inherit;font-size:13px;background:var(--neu-soft);border:1px solid var(--hair-strong);border-radius:3px;padding:8px 12px;color:var(--ink);cursor:pointer;text-align:center}
+.fnode:hover{border-color:var(--accent)}
+.fnode span{display:block;font-family:var(--mono);font-size:10.5px;color:var(--muted);margin-top:3px}
+.fnode.dark{background:var(--bad-soft);border-style:dashed}
+.fnode.mystery{background:transparent;border:1px dashed var(--muted);color:var(--muted);cursor:default}
+.fnode.pac{background:var(--bad);color:#fff;font-weight:600;border:1px solid var(--bad);padding:12px 20px}
+.fnode.pac span{color:rgba(255,255,255,.78)}
+.fnode.ads{background:var(--surface);border:1px solid var(--bad)}
+.fnode.active{outline:2px solid var(--accent);outline-offset:2px}
+.fdown{position:relative;width:2px;height:30px;background:var(--hair-strong);margin:2px auto;overflow:hidden}
+.fdown::after{content:"";position:absolute;left:-2px;width:6px;height:6px;border-radius:50%;background:var(--bad);top:-8px;opacity:0}
+.flow-info{margin-top:16px;border-top:1px solid var(--hair);padding-top:12px;font-size:13.5px;color:var(--muted);min-height:3.2em;text-wrap:pretty}
+.flow-info a{color:var(--accent)}
+
 @media (prefers-reduced-motion: no-preference){
-  .seg{transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+  /* stacked bar grows when scrolled into view (JS adds .in); falls back to load animation without JS */
+  html:not(.js) .seg{transform-origin:left;animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+  html.js .stack .seg{transform:scaleX(0);transform-origin:left}
+  html.js .stack.in .seg{animation:grow .9s cubic-bezier(.2,.7,.2,1) both}
+  html.js .stack.in .seg.oa{animation-delay:.18s}
+  html.js .stack.in .seg.su{animation-delay:.36s}
   @keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}
-  .seg.su::after{animation:fadein .5s .9s both}
+  html:not(.js) .seg.su::after{animation:fadein .5s .9s both}
+  html.js .stack .seg.su::after{opacity:0}
+  html.js .stack.in .seg.su::after{animation:fadein .5s 1.2s both}
   @keyframes fadein{from{opacity:0}to{opacity:1}}
+  /* section reveals */
+  html.js .reveal{opacity:0;transform:translateY(14px);transition:opacity .6s ease,transform .6s cubic-bezier(.2,.7,.2,1)}
+  html.js .reveal.in{opacity:1;transform:none}
+  /* money drips down the flow connectors */
+  .fdown::after{animation:drip 1.5s linear infinite}
+  .fdown:nth-of-type(odd)::after{animation-delay:.75s}
+  @keyframes drip{0%{top:-8px;opacity:0}15%{opacity:1}85%{opacity:1}100%{top:calc(100% + 2px);opacity:0}}
+  /* waffle squares pop in one dollar at a time */
+  html.js .waffle .wcell{opacity:0;transform:scale(.55)}
+  html.js .waffle.in .wcell{animation:wpop .4s cubic-bezier(.2,.7,.3,1.35) both}
+  @keyframes wpop{to{opacity:1;transform:none}}
+  /* pulse on the interactive badge */
+  .ibadge .dot{animation:ipulse 1.6s ease-in-out infinite}
+  @keyframes ipulse{0%,100%{box-shadow:0 0 0 0 rgba(61,90,115,.5)}50%{box-shadow:0 0 0 6px rgba(61,90,115,0)}}
 }
 @media print{body{background:#fff;color:#000}.finwrap{overflow:visible}}
 </style>
@@ -143,7 +297,8 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--hair-strong)
   <div class="kicker">Public campaign-finance record · Maine U.S. Senate 2026 · compiled July 9, 2026</div>
   <h1>What Can $11&nbsp;Million Buy?</h1>
   <p class="tagline">It just might have bought the derailment of a people-powered movement.</p>
-  <p class="lede">Between October 2025 and Graham Platner's exit from the race on July 8, 2026, outside groups reported <strong>$11.4&nbsp;million</strong> in independent expenditures about his candidacy to the Federal Election Commission. Nearly all of the opposing money came through a single super PAC, Pine Tree Results PAC, paying a single media vendor — and part of that PAC's funding traces to 501(c)(4) nonprofits that do not disclose their donors. This page lists every FEC-filed independent expenditure for or against Platner, each linked to the actual filing, along with the reported money flows that never appear in FEC independent-expenditure data.</p>
+  <p class="lede">Between October 2025 and July 8, 2026 — the day Graham Platner announced he was withdrawing from the race — outside groups reported <strong>$11.4&nbsp;million</strong> in independent expenditures about his candidacy to the Federal Election Commission. That money was not evenly split: <strong>$11.1&nbsp;million of it was spent opposing him</strong>, against $323K supporting him. Nearly all of the opposing money came through a single super PAC, <a href="#pine-tree-results-pac">Pine Tree Results PAC</a>, paying a single media vendor — and part of that PAC's funding traces to <a href="#hidden-money">501(c)(4) nonprofits that do not disclose their donors</a>. This page lists <a href="#platner-fec-filings">every FEC-filed independent expenditure</a> for or against Platner, each linked to the actual filing, along with the money flows that never appear in FEC data.</p>
+  <p class="repoline">Everything here is open source: this page lives in a public <strong>repository</strong> on GitHub — a version-controlled public folder where anyone can read every file, see the full history of every change, and suggest corrections. <a href="https://github.com/Daguilar0123/graham-platner-campaign-finance">Browse it, or open an issue ↗</a></p>
   <div class="byline">
     <span>Compiled by Daniel Aguilar</span>
     <a class="icn" href="https://x.com/imdanielaguilar" aria-label="Daniel Aguilar on X"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24h-6.657l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25h6.826l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>@imdanielaguilar</a>
@@ -162,6 +317,18 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--hair-strong)
   </div>
   <p class="ratio-caption">FEC-filed independent expenditures, deduplicated: <b>$11,077,173</b> opposing Platner against <b>$323,426</b> supporting him.</p>
 
+  <div class="waffle" id="waffle" role="img" aria-label="Grid of 35 squares: 34 red squares for dollars spent opposing Platner, 1 green square for the dollar spent supporting him">
+    <div class="wtitle">Every outside dollar in this race, as squares</div>
+    <div class="wgrid">
+      <div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div>
+      <div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div>
+      <div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div>
+      <div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div>
+      <div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell"></div><div class="wcell sup"></div>
+    </div>
+    <div class="wlabels"><span class="o">each square = $1 opposing (34)</span><span class="s">= $1 supporting (1)</span></div>
+  </div>
+
   <div class="stack" aria-hidden="false">
     <div class="stackbar" role="img" aria-label="Stacked bar: opposition spending before the primary 5.75 million dollars, opposition spending after the primary 5.33 million dollars, support spending 323 thousand dollars">
       <div class="seg ob"></div>
@@ -170,75 +337,372 @@ footer{font-size:13px;color:var(--muted);border-top:1px solid var(--hair-strong)
     </div>
     <div class="stack-notes">
       <span class="callout">↑ supporting: <b>$323,426</b> — the entire green sliver</span>
-      <span class="opp">opposing: <b>$5,750,012</b> before the June 9 primary&ensp;·&ensp;<b>$5,327,161</b> June 10 → July 8 exit</span>
+      <span class="opp">opposing: <b>$5,750,012</b> before the June 9 primary&ensp;·&ensp;<b>$5,327,161</b> June 10 → July 8 withdrawal announcement</span>
     </div>
     <div class="stack-key">
-      <span><span class="sw" style="background:var(--bad)"></span>oppose, pre-primary</span>
-      <span><span class="sw" style="background:var(--bad-dim)"></span>oppose, post-primary</span>
-      <span><span class="sw" style="background:var(--good)"></span>support</span>
+      <span><span class="sw" style="background:var(--bad)"></span>opposing him — before the primary (through June 9)</span>
+      <span><span class="sw" style="background:var(--bad-dim)"></span>opposing him — after the primary (June 10 – July 8)</span>
+      <span><span class="sw" style="background:var(--good)"></span>supporting him — the entire race</span>
     </div>
+    <div class="plain reveal"><strong>How to read this bar.</strong> Platner effectively ran two races back to back: first the Democratic primary, decided June 9, then the general-election matchup against Susan Collins — which ended for him when he announced his withdrawal on July 8. The bar is every outside dollar reported in the race, as one whole. The dark red half is opposition money spent <em>before</em> primary day (<b>$5.75M</b>). The lighter red half is opposition money spent in the four weeks <em>after</em> he won the primary (<b>$5.33M</b>). Notice those halves are nearly equal: winning the nomination didn't slow the spending against him — the pace held at roughly $1.3M a week from April through his withdrawal announcement. The green sliver on the far right is every dollar spent supporting him all year: <b>$323,426</b>, or about 2.8&nbsp;cents of each outside dollar in the race.</div>
   </div>
 </section>
 
-<h2>Where the opposing money went</h2>
-<p class="note">One super PAC — Pine Tree Results PAC — accounts for <span class="mono">$10,723,548</span> of the <span class="mono">$11,077,173</span> in opposition spending: six media buys, all paid to a single vendor, SRCP Media. Three smaller committees make up the remainder.</p>
-<p class="note">Source: FEC Schedule E, candidate ID <span class="mono">S6ME00373</span>, pulled July 9, 2026 via the FEC API and verified against docquery filing images. Filings marked “Support” or “Oppose” name the candidate, the payee/vendor, and the amount; each row links to the filing. Two Pine Tree Results expenditures double-filed on both a 24-hour notice (F24) and a later periodic report (F3X) are counted once.</p>
+<h2 class="reveal" id="where-the-opposing-money-went">Where the opposing money went</h2>
+<div class="plain reveal"><strong>In plain terms:</strong> this was not a crowd of groups independently deciding to spend against one candidate. Of the <b>$11.08M</b> in opposition money, <b>$10.72M</b> — about 97 cents of every dollar — came from a single super PAC, <strong>Pine Tree Results PAC</strong>. And every one of that PAC's six purchases went to the same ad-buying firm, <strong>SRCP Media</strong>, in checks of roughly $1.5–2M apiece. The other three opposing committees spent about $354K combined. So the shorthand "outside groups spent $11 million against him" really means: one PAC wrote six large checks to one vendor, and a few small players rounded it out.</div>
+
+<div class="donutwrap reveal" role="img" aria-label="Donut chart: 96.8 percent of opposition spending came from Pine Tree Results PAC alone">
+  <div class="donut"><div class="dc"><div class="pct">97¢</div><div class="dl">of every opposition<br>dollar · one PAC</div></div></div>
+  <div class="donutlegend">
+    <div class="wtitle" style="text-align:left;margin-bottom:8px">This donut = the $11.08M spent <u>opposing</u> Platner</div>
+    <div class="row"><span class="sw" style="background:var(--bad)"></span><span><span class="tag bad">Opposing Platner</span> <strong>Pine Tree Results PAC</strong> — <b>$10,723,548</b><br><span class="note">six ad purchases, all to one vendor: SRCP Media</span></span></div>
+    <div class="row"><span class="sw" style="background:var(--neu-soft);border:1px solid var(--hair-strong)"></span><span><span class="tag bad">Opposing Platner</span> <strong>every other opposing group, combined</strong> — <b>$353,625</b><br><span class="note">SLF PAC (Senate Leadership Fund) · Lead Maine Committee, Inc. · The Sentinel Action Fund</span></span></div>
+    <div class="row"><span class="sw" style="background:var(--good)"></span><span><span class="tag good">Supporting Platner</span> <strong>all supporting groups, for scale</strong> — <b>$323,426</b><br><span class="note">not part of this donut — it wouldn't even fill the small gray slice</span></span></div>
+  </div>
+</div>
+
+<h2 class="reveal" id="pine-tree-results-pac">Spotlight: Pine Tree Results PAC</h2>
+<p class="note reveal">Two independent research passes, cross-checked against each other, then reconciled. Every fact below is tagged: <span class="vtag fec">FEC record</span> = pulled directly from FEC filings · <span class="vtag press">press-reported</span> = reported by the cited outlet, not independently confirmed in FEC data.</p>
+
+<div class="cols2 reveal">
+  <div class="panel">
+    <h3>The committee</h3>
+    <div class="kv2">
+      <span class="k">FEC ID</span><span><a href="https://www.fec.gov/data/committee/C00894709/">C00894709</a> <span class="vtag fec">FEC record</span></span>
+      <span class="k">Type</span><span>Super PAC (independent expenditures only) <span class="vtag fec">FEC record</span></span>
+      <span class="k">Registered</span><span>January 3, 2025 — from a PO Box in Alexandria, Virginia (not Maine) <span class="vtag fec">FEC record</span></span>
+      <span class="k">Treasurer</span><span>Theodore V. Koch <span class="vtag fec">FEC record</span></span>
+      <span class="k">Origin</span><span>Described as a rebrand of the pro-Collins "1820 PAC" <span class="vtag press">press-reported</span> — <a class="srclink" href="https://www.axios.com/2026/03/26/republican-primary-maine-susan-collins-super-pac-millions">Axios ↗</a> · <a class="srclink" href="https://www.bangordailynews.com/2026/04/28/politics/elections/maine-senate-election-pine-tree-results-pac-graham-platner-attacks/">BDN ↗</a></span>
+      <span class="k">Raised</span><span><b>$16,099,656.77</b> (as of its May 20, 2026 filing) <span class="vtag fec">FEC record</span></span>
+      <span class="k">Spent vs. Platner</span><span><b>$10,723,548</b> — six purchases, one vendor, <a href="#platner-fec-filings">receipts below</a> <span class="vtag fec">FEC record</span></span>
+      <span class="k">Ads checked</span><span>PolitiFact fact-checked one of its anti-Platner ads <span class="vtag press">press-reported</span> — <a class="srclink" href="https://www.politifact.com/factchecks/2026/apr/29/pine-tree-results-pac/Graham-Platner-Collins-Maine-reddit-rape-Senate/">PolitiFact ↗</a></span>
+    </div>
+    <h3>Its six anti-Platner filings — tap one to preview</h3>
+    <div class="docstrip" id="docstrip">
+      <button class="doccard" data-fid="202604269866700829" data-date="April 22, 2026" data-amt="$1,999,500"><span class="dt">F24 · 2026-04-22</span><br><span class="da">$1,999,500</span><span class="dk">preview ▸</span></button>
+      <button class="doccard" data-fid="202605199866998382" data-date="May 14, 2026" data-amt="$1,999,500"><span class="dt">F24 · 2026-05-14</span><br><span class="da">$1,999,500</span><span class="dk">preview ▸</span></button>
+      <button class="doccard" data-fid="202606119870604860" data-date="June 8, 2026" data-amt="$1,501,012"><span class="dt">F24 · 2026-06-08</span><br><span class="da">$1,501,012</span><span class="dk">preview ▸</span></button>
+      <button class="doccard" data-fid="202606199870819547" data-date="June 12, 2026" data-amt="$1,508,512"><span class="dt">F24 · 2026-06-12</span><br><span class="da">$1,508,512</span><span class="dk">preview ▸</span></button>
+      <button class="doccard" data-fid="202606259874264196" data-date="June 18, 2026" data-amt="$1,853,012"><span class="dt">F24 · 2026-06-18</span><br><span class="da">$1,853,012</span><span class="dk">preview ▸</span></button>
+      <button class="doccard" data-fid="202607029874736781" data-date="June 26, 2026" data-amt="$1,862,012"><span class="dt">F24 · 2026-06-26</span><br><span class="da">$1,862,012</span><span class="dk">preview ▸</span></button>
+    </div>
+    <div class="docpanel" id="docpanel">
+      <div class="dp-head">FEC Form 24 — 24-hour independent expenditure notice</div>
+      <div class="kv2">
+        <span class="k">Filed by</span><span>Pine Tree Results PAC (<span class="mono">C00894709</span>)</span>
+        <span class="k">Candidate</span><span>Graham Platner — <span class="tag bad">Oppose</span></span>
+        <span class="k">Payee</span><span>SRCP Media — media production &amp; placement</span>
+        <span class="k">Amount</span><span><b id="dp-amt"></b></span>
+        <span class="k">Date</span><span id="dp-date"></span>
+      </div>
+      <p class="note">Contents above were verified against the scanned filing. The FEC's document server doesn't allow its files to be embedded on other sites, so the button below opens the original — the actual paperwork — in a new tab.</p>
+      <a class="openbtn" id="dp-open" href="#" target="_blank" rel="noopener">Open the original filing on fec.gov ↗</a>
+    </div>
+    <p class="note"><strong>In its own words</strong> — the PAC's website (<a href="https://www.pinetreeresults.com/">pinetreeresults.com</a>, verified live July 10, 2026) is a minimal splash page whose markup exposes no logo, colors, or favicon, so this page renders it in plain document style rather than guessing at branding. Its complete self-description:</p>
+    <p class="selfdesc">"Advocating for candidates and policies that protect our values and deliver results for the people of Maine." — followed by the required disclaimer: "Paid for by Pine Tree Results PAC. Not authorized by any candidate or candidate's committee."</p>
+    <p class="note">Fox News separately reported an attack-focused Platner website from the PAC; its current contents could not be verified at compile time. <a class="srclink" href="https://www.foxnews.com/politics/new-website-puts-platner-notice-exposing-scandals-red-flag-after-another">Fox News ↗</a></p>
+  </div>
+  <div class="panel">
+    <h3>Top disclosed donors — from the PAC's own FEC Schedule A</h3>
+    <ul class="donorlist">
+      <li><span>Stronger America, Inc. <span class="vtag fec">FEC record</span><br><span class="note">501(c)(4) nonprofit — its own donors are not disclosed anywhere · Dec 29, 2025</span></span><span class="amt">$3,000,000</span></li>
+      <li><span>Kenneth Griffin <span class="vtag fec">FEC record</span><br><span class="note">May 5, 2026</span></span><span class="amt">$2,500,000</span></li>
+      <li><span>Stephen Schwarzman <span class="vtag fec">FEC record</span><br><span class="note">June 27, 2025</span></span><span class="amt">$2,000,000</span></li>
+      <li><span>Lexington Fund <span class="vtag fec">FEC record</span><br><span class="note">tied to Leonard Leo; own funders undisclosed · June 27, 2025</span></span><span class="amt">$1,000,000</span></li>
+      <li><span>James S. Davis <span class="vtag fec">FEC record</span><br><span class="note">New Balance · June 11, 2025</span></span><span class="amt">$1,000,000</span></li>
+      <li><span>Louis Bacon <span class="vtag fec">FEC record</span><br><span class="note">Feb 13, 2026</span></span><span class="amt">$500,000</span></li>
+      <li><span>John Malone <span class="vtag fec">FEC record</span><br><span class="note">Nov 24, 2025</span></span><span class="amt">$500,000</span></li>
+      <li><span>Paul Singer <span class="vtag fec">FEC record</span></span><span class="amt">$500,000</span></li>
+      <li><span>M. Jude Reyes &amp; J. Christopher Reyes <span class="vtag fec">FEC record</span><br><span class="note">Reyes Holdings · Feb 19, 2026 · $500K each</span></span><span class="amt">$1,000,000</span></li>
+      <li><span>William Oberndorf ($250K), John Childs ($250K), Alex Karp ($100K) <span class="vtag press">press-reported</span><br><span class="note">reported by The Nation; not independently re-confirmed in FEC data at compile time</span></span><span class="amt">$600,000</span></li>
+    </ul>
+    <p class="note">Full itemization: <a class="srclink" href="https://www.fec.gov/data/receipts/?committee_id=C00894709">the PAC's receipts on fec.gov ↗</a> · donor-network reporting: <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a></p>
+  </div>
+</div>
+
+<div class="plain reveal"><strong>What happened after the withdrawal announcement:</strong> per the Bangor Daily News, the PAC pulled its anti-Platner ads and, with roughly <b>$8M</b> still on hand, is preparing to direct its remaining money at whoever becomes the Democratic nominee. <a class="srclink" href="https://www.bangordailynews.com/2026/07/08/politics/elections/maine-election-senate-pine-tree-results-pac-graham-platner-ads/">BDN ↗</a></div>
+
+<h3 class="reveal" style="font-family:var(--serif);font-weight:400;font-size:clamp(18px,2.6vw,23px);margin:40px 0 8px">The vendor and the smaller committees</h3>
+<div class="minis reveal">
+  <div class="mini"><h4>SRCP Media</h4>Political ad and media-buying firm in Alexandria, VA — the sole payee on all six Pine Tree Results purchases (<b>$10,723,548</b> <span class="vtag fec">FEC record</span>). Founded by the late Greg Stevens; managing partners Paul Curcio, Erik Potholm, and Ben Burger; past work includes McCain 2000/2008 and Gov. Greg Abbott <span class="vtag press">press-reported</span>. <a class="srclink" href="https://srcpmedia.com/">srcpmedia.com ↗</a> · <a class="srclink" href="https://www.opensecrets.org/campaign-expenditures/vendor?vendor=Srcp+Media">OpenSecrets ↗</a></div>
+  <div class="mini"><h4>SLF PAC (Senate Leadership Fund)</h4>The national Senate GOP-aligned super PAC (<a class="srclink" href="https://www.fec.gov/data/committee/C00571703/">C00571703</a>, treasurer Caleb Crosby). $250,000 opposing Platner on June 9, 2026, paid to Alamo Intelligence LLC for online advertising <span class="vtag fec">FEC record</span>.</div>
+  <div class="mini"><h4>Lead Maine Committee, Inc.</h4>Maine super PAC (<a class="srclink" href="https://www.fec.gov/data/committee/C00946921/">C00946921</a>, treasurer Nicholas Stoltzfus). $102,625 opposing Platner — and separately ~$648K <em>supporting</em> Collins <span class="vtag fec">FEC record</span>.</div>
+  <div class="mini"><h4>The Sentinel Action Fund</h4>Heritage Action-affiliated super PAC (<a class="srclink" href="https://www.fec.gov/data/committee/C00811166/">C00811166</a>) — treasurer Nicholas Stoltzfus, the same treasurer as Lead Maine Committee <span class="vtag fec">FEC record</span>. $1,000 opposing Platner via X Corp. (<a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660023">the filing ↗</a>).</div>
+</div>
+
+<h3 class="reveal" id="platner-fec-filings" style="font-family:var(--serif);font-weight:400;font-size:clamp(20px,3vw,26px);margin:48px 0 8px">The complete FEC filing ledger — every dollar, with its receipt</h3>
+<div class="plain reveal"><strong>Don't just take this page's word for it.</strong> The table below is all 22 line items, and every row ends with a <em>view the filing</em> button that opens the actual scanned document the committee itself submitted to the Federal Election Commission — the same paperwork a journalist or FEC auditor would pull. It names the candidate, declares "Support" or "Oppose," names who got paid, and states the amount. The receipts are the point: click any of them.</div>
+<p class="note reveal">Where these numbers come from: FEC Schedule E filings for candidate ID <span class="mono">S6ME00373</span>, pulled July 9, 2026 via the FEC's public API and checked against the scanned filing images. One accounting wrinkle, handled: when a PAC makes a big purchase close to an election it must report it twice — once in a rapid 24-hour notice, and again later in its regular periodic report. Two Pine Tree Results purchases appear in both places; they are counted once here, not twice.</p>
 
 <div class="finwrap"><table class="fin">
 <thead>
 <tr><th>Spender</th><th>Side</th><th class="amt">Amount</th><th>Date</th><th>Payee / purpose</th><th>Filing</th></tr>
 </thead>
 <tbody>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,999,500</td><td style="white-space:nowrap">2026-04-22</td><td>SRCP Media — media production/placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202604269866700829">filing ↗</a></td></tr>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,999,500</td><td style="white-space:nowrap">2026-05-14</td><td>SRCP Media — media/website</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605199866998382">filing ↗</a></td></tr>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,501,012</td><td style="white-space:nowrap">2026-06-08</td><td>SRCP Media — media production/placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606119870604860">filing ↗</a></td></tr>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,508,512</td><td style="white-space:nowrap">2026-06-12</td><td>SRCP Media — media production/placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606199870819547">filing ↗</a></td></tr>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,853,012</td><td style="white-space:nowrap">2026-06-18</td><td>SRCP Media — media production/placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606259874264196">filing ↗</a></td></tr>
-<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,862,012</td><td style="white-space:nowrap">2026-06-26</td><td>SRCP Media — media production/placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202607029874736781">filing ↗</a></td></tr>
-<tr><td>SLF PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$250,000</td><td style="white-space:nowrap">2026-06-09</td><td>Alamo Intelligence — online advertising</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606099870550946">filing ↗</a></td></tr>
-<tr><td>Lead Maine Committee, Inc.</td><td><span class="tag bad">Oppose</span></td><td class="amt">$100,000</td><td style="white-space:nowrap">2026-06-17</td><td>Flexpoint Media — digital placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606199870845871">filing ↗</a></td></tr>
-<tr><td>Lead Maine Committee, Inc.</td><td><span class="tag bad">Oppose</span></td><td class="amt">$2,625</td><td style="white-space:nowrap">2026-06-25</td><td>Jamestown Associates — media production</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606259874264266">filing ↗</a></td></tr>
-<tr><td>The Sentinel Action Fund</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,000</td><td style="white-space:nowrap">2026-06-10</td><td>X Corp. — digital placement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660023">filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,999,500</td><td style="white-space:nowrap">2026-04-22</td><td>SRCP Media — media production/placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202604269866700829">view the filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,999,500</td><td style="white-space:nowrap">2026-05-14</td><td>SRCP Media — media/website</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605199866998382">view the filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,501,012</td><td style="white-space:nowrap">2026-06-08</td><td>SRCP Media — media production/placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606119870604860">view the filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,508,512</td><td style="white-space:nowrap">2026-06-12</td><td>SRCP Media — media production/placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606199870819547">view the filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,853,012</td><td style="white-space:nowrap">2026-06-18</td><td>SRCP Media — media production/placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606259874264196">view the filing ↗</a></td></tr>
+<tr><td>Pine Tree Results PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,862,012</td><td style="white-space:nowrap">2026-06-26</td><td>SRCP Media — media production/placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202607029874736781">view the filing ↗</a></td></tr>
+<tr><td>SLF PAC</td><td><span class="tag bad">Oppose</span></td><td class="amt">$250,000</td><td style="white-space:nowrap">2026-06-09</td><td>Alamo Intelligence — online advertising</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606099870550946">view the filing ↗</a></td></tr>
+<tr><td>Lead Maine Committee, Inc.</td><td><span class="tag bad">Oppose</span></td><td class="amt">$100,000</td><td style="white-space:nowrap">2026-06-17</td><td>Flexpoint Media — digital placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606199870845871">view the filing ↗</a></td></tr>
+<tr><td>Lead Maine Committee, Inc.</td><td><span class="tag bad">Oppose</span></td><td class="amt">$2,625</td><td style="white-space:nowrap">2026-06-25</td><td>Jamestown Associates — media production</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606259874264266">view the filing ↗</a></td></tr>
+<tr><td>The Sentinel Action Fund</td><td><span class="tag bad">Oppose</span></td><td class="amt">$1,000</td><td style="white-space:nowrap">2026-06-10</td><td>X Corp. — digital placement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660023">view the filing ↗</a></td></tr>
 <tr class="subtotal opp"><td colspan="2">Opposing subtotal (deduped)</td><td class="amt">$11,077,173</td><td colspan="3"></td></tr>
-<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$150,000</td><td style="white-space:nowrap">2026-06-15</td><td>Debra Schommer Media Group — TV advertising</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606169870695158">filing ↗</a></td></tr>
-<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$50,000</td><td style="white-space:nowrap">2026-06-10</td><td>Debra Schommer Media Group — digital advertising</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660137">filing ↗</a></td></tr>
-<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$19,000</td><td style="white-space:nowrap">2026-05-01</td><td>Challengers, LLC — digital ad production</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660137">filing ↗</a></td></tr>
-<tr><td>League of Labor Voters</td><td><span class="tag good">Support</span></td><td class="amt">$25,000</td><td style="white-space:nowrap">2026-06-10</td><td>Debra Schommer Media Group — TV ad buy</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606139870662335">filing ↗</a></td></tr>
-<tr><td>League of Labor Voters</td><td><span class="tag good">Support</span></td><td class="amt">$25,000</td><td style="white-space:nowrap">2026-06-11</td><td>Debra Schommer Media Group — TV ad buy</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606149870663002">filing ↗</a></td></tr>
-<tr><td>National Nurses United</td><td><span class="tag good">Support</span></td><td class="amt">$43,875</td><td style="white-space:nowrap">2026-05-14</td><td>Postal Systems — postcard mailers</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866975367">filing ↗</a></td></tr>
-<tr><td>National Nurses United</td><td><span class="tag good">Support</span></td><td class="amt">$6,731</td><td style="white-space:nowrap">2026-05-14</td><td>Autumn Press — postcard mailers</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866975367">filing ↗</a></td></tr>
-<tr><td>Forward Blue</td><td><span class="tag good">Support</span></td><td class="amt">$3,000</td><td style="white-space:nowrap">2026-05-03</td><td>Switchboard — voter-contact texting</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605209867464478">filing ↗</a></td></tr>
-<tr><td>Blue Majority Makers PAC</td><td><span class="tag good">Support</span></td><td class="amt">$156</td><td style="white-space:nowrap">2026-04-30</td><td>Activate Change — text messages</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866976601">filing ↗</a></td></tr>
-<tr><td>The People United PAC</td><td><span class="tag good">Support</span></td><td class="amt">$600</td><td style="white-space:nowrap">2025-10 → 2026-03</td><td>Strategy &amp; Hustle — fundraising emails (6 items)</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202604209863280929">filing ↗</a></td></tr>
-<tr><td>GiveGreen United Action</td><td><span class="tag good">Support</span></td><td class="amt">$53</td><td style="white-space:nowrap">2026-04 → 04-30</td><td>LCV / New Blue Interactive — online messages</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605199867005570">filing ↗</a></td></tr>
-<tr><td>Sierra Club Independent Action</td><td><span class="tag good">Support</span></td><td class="amt">$10</td><td style="white-space:nowrap">2026-05-01</td><td>Sierra Club — website endorsement</td><td><a class="srclink" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870655967">filing ↗</a></td></tr>
+<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$150,000</td><td style="white-space:nowrap">2026-06-15</td><td>Debra Schommer Media Group — TV advertising</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606169870695158">view the filing ↗</a></td></tr>
+<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$50,000</td><td style="white-space:nowrap">2026-06-10</td><td>Debra Schommer Media Group — digital advertising</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660137">view the filing ↗</a></td></tr>
+<tr><td>Common Defense Action Fund</td><td><span class="tag good">Support</span></td><td class="amt">$19,000</td><td style="white-space:nowrap">2026-05-01</td><td>Challengers, LLC — digital ad production</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870660137">view the filing ↗</a></td></tr>
+<tr><td>League of Labor Voters</td><td><span class="tag good">Support</span></td><td class="amt">$25,000</td><td style="white-space:nowrap">2026-06-10</td><td>Debra Schommer Media Group — TV ad buy</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606139870662335">view the filing ↗</a></td></tr>
+<tr><td>League of Labor Voters</td><td><span class="tag good">Support</span></td><td class="amt">$25,000</td><td style="white-space:nowrap">2026-06-11</td><td>Debra Schommer Media Group — TV ad buy</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606149870663002">view the filing ↗</a></td></tr>
+<tr><td>National Nurses United</td><td><span class="tag good">Support</span></td><td class="amt">$43,875</td><td style="white-space:nowrap">2026-05-14</td><td>Postal Systems — postcard mailers</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866975367">view the filing ↗</a></td></tr>
+<tr><td>National Nurses United</td><td><span class="tag good">Support</span></td><td class="amt">$6,731</td><td style="white-space:nowrap">2026-05-14</td><td>Autumn Press — postcard mailers</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866975367">view the filing ↗</a></td></tr>
+<tr><td>Forward Blue</td><td><span class="tag good">Support</span></td><td class="amt">$3,000</td><td style="white-space:nowrap">2026-05-03</td><td>Switchboard — voter-contact texting</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605209867464478">view the filing ↗</a></td></tr>
+<tr><td>Blue Majority Makers PAC</td><td><span class="tag good">Support</span></td><td class="amt">$156</td><td style="white-space:nowrap">2026-04-30</td><td>Activate Change — text messages</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605159866976601">view the filing ↗</a></td></tr>
+<tr><td>The People United PAC</td><td><span class="tag good">Support</span></td><td class="amt">$600</td><td style="white-space:nowrap">2025-10 → 2026-03</td><td>Strategy &amp; Hustle — fundraising emails (6 items)</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202604209863280929">view the filing ↗</a></td></tr>
+<tr><td>GiveGreen United Action</td><td><span class="tag good">Support</span></td><td class="amt">$53</td><td style="white-space:nowrap">2026-04 → 04-30</td><td>LCV / New Blue Interactive — online messages</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202605199867005570">view the filing ↗</a></td></tr>
+<tr><td>Sierra Club Independent Action</td><td><span class="tag good">Support</span></td><td class="amt">$10</td><td style="white-space:nowrap">2026-05-01</td><td>Sierra Club — website endorsement</td><td><a class="fbtn" href="https://docquery.fec.gov/cgi-bin/fecimg/?202606129870655967">view the filing ↗</a></td></tr>
 <tr class="subtotal sup"><td colspan="2">Supporting subtotal (deduped)</td><td class="amt">$323,426</td><td colspan="3"></td></tr>
 </tbody>
 </table></div>
 
-<div class="cols2">
+<h2 class="reveal" id="hidden-money">The money you can't trace — following it upstream</h2>
+<p class="pullq reveal"><span class="pub">The spending is public.</span><br><span class="priv">The source isn't.</span></p>
+<div class="plain reveal"><strong>What "dark money" actually means here — no metaphors, just the rule.</strong> Everything in the table above is money a super PAC <em>spent</em>. The FEC requires every dollar of that to be reported, which is why this page can list it down to the cent, with receipts. And a super PAC must also name its donors. But here's the design of the system: when one of those donors is a 501(c)(4) "social welfare" nonprofit, the disclosure obligation ends at the nonprofit's name — because that kind of nonprofit is allowed to raise unlimited money without ever naming <em>its</em> donors. Walk the trail yourself:</div>
+
+<div class="vanish reveal" aria-label="Three steps of the money trail: two visible, one that legally ends">
+  <div class="vstep seen">
+    <div class="vcap">Step 1 · On the public record</div>
+    <div class="vt">Pine Tree Results PAC paid <b>$10.7M</b> to an ad firm to oppose a candidate. Filed with the FEC. You can read every receipt above.</div>
+  </div>
+  <div class="varrow">→</div>
+  <div class="vstep seen">
+    <div class="vcap">Step 2 · On the public record</div>
+    <div class="vt">A nonprofit called Stronger America, Inc. put <b>$3,000,000</b> into that PAC on Dec 29, 2025 — it's right there in the PAC's own FEC donor filings. A name and a number — so far, so visible.</div>
+  </div>
+  <div class="varrow">→</div>
+  <div class="vstep void">
+    <div class="vcap">Step 3 · The record ends here</div>
+    <div class="vq">?</div>
+    <div class="vt">Who gave the nonprofit the $3,000,000? <strong>No filing answers that. None exists.</strong> Not hidden in fine print — legally never written down for the public. This is the step the word "dark" refers to.</div>
+  </div>
+</div>
+<p class="note reveal">This isn't a loophole someone found last year; it's how 501(c)(4) disclosure law works in every federal race. What makes it concrete here: for the largest spender in this race, the PAC's own FEC donor filings show both the visible donors and the two nonprofits where the trail stops — with donor-network reporting from The Nation and the Bangor Daily News filling in who runs those nonprofits. The diagram below maps that entire pipeline — <strong>click any name in it</strong> for what the public record shows about them, and exactly where it goes dark.</p>
+
+<div class="flow reveal" id="flow" role="group" aria-label="Interactive diagram of money flowing into Pine Tree Results PAC and out to ads — every box opens a detail card">
+  <div style="text-align:center"><span class="ibadge"><span class="dot"></span>Interactive — click any box to open its record</span></div>
+  <div class="flow-tier">
+    <div class="flow-group dark">
+      <div class="flow-cap">Money whose original source is hidden</div>
+      <div class="fnode mystery">Original donors: unknown<span>a 501(c)(4) never has to name them</span></div>
+      <div class="fdown"></div>
+      <div class="fchips">
+        <button class="fnode dark" data-k="stronger">Stronger America, Inc.<span>nonprofit · $3M · FEC-recorded</span></button>
+        <button class="fnode dark" data-k="lexington">Lexington Fund<span>nonprofit · $1M · FEC-recorded</span></button>
+      </div>
+    </div>
+    <div class="flow-group named">
+      <div class="flow-cap">Money with a name attached</div>
+      <div class="fchips">
+        <button class="fnode" data-k="griffin">Kenneth Griffin<span>$2.5M</span></button>
+        <button class="fnode" data-k="schwarzman">Stephen Schwarzman<span>$2M</span></button>
+        <button class="fnode" data-k="davis">James S. Davis<span>$1M</span></button>
+        <button class="fnode" data-k="bacon">Louis Bacon<span>$500K</span></button>
+        <button class="fnode" data-k="malone">John Malone<span>$500K</span></button>
+        <button class="fnode" data-k="singer">Paul Singer<span>$500K</span></button>
+        <button class="fnode" data-k="oberndorf">William Oberndorf<span>$250K · press-reported</span></button>
+        <button class="fnode" data-k="childs">John Childs<span>$250K · press-reported</span></button>
+        <button class="fnode" data-k="karp">Alex Karp<span>$100K · press-reported</span></button>
+      </div>
+    </div>
+  </div>
+  <div class="fdown" style="height:36px"></div>
+  <button class="fnode pac" data-k="pac">Pine Tree Results PAC<span>raised $16.1M through its May 20, 2026 FEC filing</span></button>
+  <div class="fdown" style="height:36px"></div>
+  <button class="fnode ads" data-k="ads">SRCP Media — six ad buys opposing Platner<span>$10,723,548 · every purchase itemized in the table above</span></button>
+  <p class="flow-info" id="flowinfo">Tap or click any box — a card opens with what the public record shows about it, and exactly where the trail stops.</p>
+</div>
+
+<dialog class="fdlg" id="fmodal" aria-labelledby="fmodal-title">
+  <div class="fdlg-head"><h4 id="fmodal-title"></h4><button class="fdlg-close" id="fmodal-close">close ✕</button></div>
+  <div class="fdlg-body" id="fmodal-body"></div>
+</dialog>
+
+<p class="note reveal" style="margin-top:14px">Also in this category, on the other side: <strong>Senate Majority PAC</strong> (pro-Democratic) reportedly reserved advertising in the race and then pulled it around July 6 — so it shows up in news coverage but has no Platner spending items in the FEC data pulled for this page. <a class="srclink" href="https://www.breitbart.com/politics/2026/07/06/senate-majority-pac-pulls-maine-ad-spending-wants-platner-off-ballot/">Breitbart ↗</a></p>
+
+<div class="cols2 reveal">
   <div class="panel">
-    <h3>Money not visible in FEC IE data</h3>
+    <h3>Why the news reports even bigger numbers</h3>
+    <p class="note">The FEC table above counts only formally itemized "independent expenditures." News outlets also count things the FEC table doesn't — airtime reserved in advance, ad-tracker estimates, and ads that don't legally count as independent expenditures. By those broader counts:</p>
     <ul>
-      <li><strong>Stronger America, Inc.</strong> — Arlington, VA 501(c)(4) led by GOP operative Paul Cooksey; reportedly gave <strong>$3M</strong> (Dec 29, 2025) that funded efforts against Platner. It files no IE ads under its own name — it is a donor <em>into</em> Pine Tree Results PAC. <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a></li>
-      <li><strong>Lexington Fund</strong> (tied to Leonard Leo) — reportedly <strong>$1M</strong> into Pine Tree Results PAC. <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a></li>
-      <li><strong>Pine Tree Results PAC funding</strong> — ~$12.7M raised through March; named donors include Louis Bacon ($500K), John Malone ($500K), William Oberndorf ($250K), John Childs ($250K), Alex Karp ($100K), Stephen Schwarzman. <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a> · <a class="srclink" href="https://www.bangordailynews.com/2026/07/08/politics/elections/maine-election-senate-pine-tree-results-pac-graham-platner-ads/">BDN ↗</a></li>
-      <li><strong>Senate Majority PAC</strong> (pro-Democratic) — reportedly reserved, then pulled, ad spending around July 6; no Platner Schedule E items appear under its name in the data pulled. <a class="srclink" href="https://www.breitbart.com/politics/2026/07/06/senate-majority-pac-pulls-maine-ad-spending-wants-platner-off-ballot/">Breitbart ↗</a></li>
+      <li>GOP-aligned committees: <strong>~$19M</strong> in broadcast + digital across the race; Democratic-aligned groups: <strong>~$6.4M</strong>. <a class="srclink" href="https://thehill.com/homenews/campaign/5947680-graham-platner-gop-outspending-democrats-maine-senate-race/">The Hill ↗</a></li>
+      <li>Pine Tree Results' attack-ad pace was reported at roughly <strong>$1.5M a week</strong>. <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a></li>
+      <li>How the Platner campaign itself described the spending gap: <a class="srclink" href="https://www.mainepublic.org/politics/2026-07-01/graham-platners-campaign-is-confident-but-worries-about-the-gops-spending-spree">Maine Public ↗</a></li>
     </ul>
   </div>
   <div class="panel">
-    <h3>Press aggregates (broader than itemized IE)</h3>
-    <ul>
-      <li>GOP-aligned committees: <strong>~$19M</strong> broadcast + digital in the race; Democratic-aligned groups: <strong>~$6.4M</strong>. <a class="srclink" href="https://thehill.com/homenews/campaign/5947680-graham-platner-gop-outspending-democrats-maine-senate-race/">The Hill ↗</a></li>
-      <li>Pine Tree Results attack-ad pace reported at ~$1.5M/week. <a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a></li>
-      <li>The Platner campaign's own view of the spending gap: <a class="srclink" href="https://www.mainepublic.org/politics/2026-07-01/graham-platners-campaign-is-confident-but-worries-about-the-gops-spending-spree">Maine Public ↗</a></li>
-    </ul>
-    <h3>Method</h3>
-    <p class="note">Query: <span class="mono" style="word-break:break-all">api.open.fec.gov/v1/schedules/schedule_e/?candidate_id=S6ME00373&amp;per_page=100</span> (30 itemized records). Note: the API's <span class="mono">candidate_search=platner</span> parameter returns unrelated records; the candidate ID is required. Press aggregates exceed itemized IE totals because they include ad-tracker estimates and non-IE spending. Raw un-deduped sum of all 30 line items: $15,399,598.89.</p>
+    <h3>How this page was built</h3>
+    <p class="note">We asked the FEC's public database for every independent expenditure filed about this candidate and got 30 line items back, then opened the actual scanned filings to verify each one. (Technical note for anyone reproducing this: query <span class="mono" style="word-break:break-all">api.open.fec.gov/v1/schedules/schedule_e/?candidate_id=S6ME00373&amp;per_page=100</span> — searching by the name "platner" instead of the candidate ID returns unrelated records.) Adding all 30 raw line items gives $15,399,598.89; after removing the double-reported filings described above, the honest total is $11.4M. Press figures run higher than FEC figures because they estimate more broadly — that's a difference in what's being counted, not a contradiction.</p>
+    <a class="repocard" href="https://github.com/Daguilar0123/graham-platner-campaign-finance">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27s1.36.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg>
+      <span><span class="rc-t">Browse the source &amp; data on GitHub</span><br><span class="rc-s">Every file, every figure, and the full edit history of this page are public. Spot an error? Open an issue — corrections are welcome.</span></span>
+    </a>
   </div>
 </div>
 
 <footer>This page records who spent what in the 2026 Maine U.S. Senate race regarding Graham Platner, from public FEC filings and cited press reporting. It is a spending ledger only; it draws no conclusions about any candidate, committee, or donor, and endorses no side of the race. Compiled July 9, 2026 — figures reflect filings available on that date; later amendments or filings may change totals. Live data: <a href="https://www.fec.gov/data/independent-expenditures/?data_type=processed&amp;candidate_id=S6ME00373">fec.gov independent expenditures for S6ME00373</a>.</footer>
 </div>
+<script>
+document.documentElement.classList.add("js");
+(function(){
+  var reduced=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // give the ledger table a reveal too
+  var fw=document.querySelector(".finwrap"); if(fw) fw.classList.add("reveal");
+
+  // scroll-triggered reveals (+ stacked-bar growth)
+  var targets=[].slice.call(document.querySelectorAll(".reveal"));
+  var stack=document.querySelector(".stack"); if(stack) targets.push(stack);
+  var ratio=document.querySelector(".ratio"); if(ratio) targets.push(ratio);
+  var waffle=document.getElementById("waffle");
+  if(waffle){
+    [].slice.call(waffle.querySelectorAll(".wcell")).forEach(function(c,i){c.style.animationDelay=(i*45)+"ms"});
+    targets.push(waffle);
+  }
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        e.target.classList.add("in");
+        if(e.target===ratio) countUp();
+        io.unobserve(e.target);
+      });
+    },{threshold:.25});
+    targets.forEach(function(t){io.observe(t)});
+  } else {
+    targets.forEach(function(t){t.classList.add("in")});
+    countUp();
+  }
+
+  // count-up for the $34 : $1 hero and the caption totals
+  var counted=false;
+  function countUp(){
+    if(counted) return; counted=true;
+    if(reduced) return; // leave final numbers as authored
+    var items=[
+      {el:document.querySelector(".ratio-line .big.o"),to:34,fmt:function(v){return "$"+Math.round(v)}},
+      {el:document.querySelector(".ratio-line .big.s"),to:1,fmt:function(v){return "$"+Math.ceil(v)}},
+      {el:document.querySelectorAll(".ratio-caption b")[0],to:11077173,fmt:function(v){return "$"+Math.round(v).toLocaleString("en-US")}},
+      {el:document.querySelectorAll(".ratio-caption b")[1],to:323426,fmt:function(v){return "$"+Math.round(v).toLocaleString("en-US")}}
+    ];
+    var t0=null,DUR=1100;
+    function frame(ts){
+      if(!t0) t0=ts;
+      var p=Math.min((ts-t0)/DUR,1), ease=1-Math.pow(1-p,3);
+      items.forEach(function(it){ if(it.el) it.el.textContent=it.fmt(it.to*ease); });
+      if(p<1) requestAnimationFrame(frame);
+    }
+    requestAnimationFrame(frame);
+  }
+
+  // interactive money-flow modal cards
+  var NATION='<a class="srclink" href="https://www.thenation.com/article/politics/graham-platner-super-pac-dark-money-susan-collins-maine-senate-race/">The Nation ↗</a>';
+  var BDN='<a class="srclink" href="https://www.bangordailynews.com/2026/07/08/politics/elections/maine-election-senate-pine-tree-results-pac-graham-platner-ads/">BDN ↗</a>';
+  var FECR='<a class="srclink" href="https://www.fec.gov/data/receipts/?committee_id=C00894709">FEC Schedule A ↗</a>';
+  function donorCard(name,amt,date,note){return {t:name,b:
+    '<div class="kv">'+
+    '<span class="k">Role</span><span>Direct donor to Pine Tree Results PAC'+(note?' — '+note:'')+'</span>'+
+    '<span class="k">Amount</span><span><b>'+amt+'</b>'+(date?' · '+date:'')+'</span>'+
+    '<span class="k">Visible?</span><span class="seen-line">Yes — recorded in the PAC’s own FEC donor filings under the donor’s name.</span>'+
+    '<span class="k">Sources</span><span>'+FECR+' · '+NATION+'</span></div>'+
+    '<p>This is what disclosure looks like when it works: a name, an amount, a date, on the record. Compare it with the boxes on the hidden side of this diagram.</p>'};}
+  function pressCard(name,amt){return {t:name,b:
+    '<div class="kv">'+
+    '<span class="k">Role</span><span>Reported direct donor to Pine Tree Results PAC</span>'+
+    '<span class="k">Amount</span><span><b>'+amt+'</b> — <em>press-reported</em>; not independently re-confirmed in FEC data at compile time</span>'+
+    '<span class="k">Source</span><span>'+NATION+'</span></div>'};}
+  var CARDS={
+    stronger:{t:"Stronger America, Inc.",b:
+      '<div class="kv">'+
+      '<span class="k">What it is</span><span>A 501(c)(4) "social welfare" nonprofit, Arlington, VA (EIN 88-3884521). President: Republican operative Paul H. Cooksey; treasurer/secretary: Les Williamson — per its IRS filings via <a class="srclink" href="https://projects.propublica.org/nonprofits/organizations/883884521">ProPublica ↗</a></span>'+
+      '<span class="k">On the record</span><span class="seen-line">Gave <b>$3,000,000</b> on Dec 29, 2025 to Pine Tree Results PAC — recorded in the PAC’s FEC donor filings ('+FECR+'). It buys no ads under its own name.</span>'+
+      '<span class="k">Its own books</span><span>IRS filings show total revenue of $2M (FY2024), $0 (FY2023), $250K (FY2022) — no donor names required or listed</span>'+
+      '<span class="k">And upstream?</span><span class="stop-line">Who funded Stronger America itself: no filing answers that. The trail legally ends here.</span>'+
+      '<span class="k">Reporting</span><span>'+NATION+'</span></div>'},
+    lexington:{t:"Lexington Fund",b:
+      '<div class="kv">'+
+      '<span class="k">What it is</span><span>A fund tied to conservative legal activist Leonard Leo</span>'+
+      '<span class="k">On the record</span><span class="seen-line">Moved <b>$1,000,000</b> into Pine Tree Results PAC on June 27, 2025 — recorded in the PAC’s FEC donor filings ('+FECR+')</span>'+
+      '<span class="k">And upstream?</span><span class="stop-line">Its own funders are not publicly disclosed anywhere.</span>'+
+      '<span class="k">Reporting</span><span>'+NATION+'</span></div>'},
+    griffin:donorCard("Kenneth Griffin","$2,500,000","May 5, 2026"),
+    schwarzman:donorCard("Stephen Schwarzman","$2,000,000","June 27, 2025","Blackstone CEO"),
+    davis:donorCard("James S. Davis","$1,000,000","June 11, 2025","New Balance"),
+    bacon:donorCard("Louis Bacon","$500,000","Feb 13, 2026"),
+    malone:donorCard("John Malone","$500,000","Nov 24, 2025"),
+    singer:donorCard("Paul Singer","$500,000"),
+    oberndorf:pressCard("William Oberndorf","$250,000"),
+    childs:pressCard("John Childs","$250,000"),
+    karp:pressCard("Alex Karp","$100,000"),
+    pac:{t:"Pine Tree Results PAC",b:
+      '<div class="kv">'+
+      '<span class="k">What it is</span><span>The super PAC behind ~97% of the opposition spending in this race — FEC ID <a class="srclink" href="https://www.fec.gov/data/committee/C00894709/">C00894709</a>, registered Jan 3, 2025, treasurer Theodore V. Koch, PO Box in Alexandria, VA. Reported as a rebrand of the pro-Collins "1820 PAC" (<a class="srclink" href="https://www.axios.com/2026/03/26/republican-primary-maine-susan-collins-super-pac-millions">Axios ↗</a>)</span>'+
+      '<span class="k">Raised</span><span><b>$16,099,656.77</b> through its May 20, 2026 filing — partly from named individuals, partly from nonprofits whose original funders are hidden</span>'+
+      '<span class="k">Spent</span><span><b>$10,723,548</b> opposing Platner — six purchases, one vendor, every receipt in the <a href="#platner-fec-filings">filing ledger above</a></span>'+
+      '<span class="k">Sources</span><span>'+FECR+' · '+NATION+' · '+BDN+'</span></div>'},
+    ads:{t:"SRCP Media",b:
+      '<div class="kv">'+
+      '<span class="k">What it is</span><span>The ad firm paid in all six Pine Tree Results purchases</span>'+
+      '<span class="k">Paid</span><span><b>$10,723,548</b> for producing and placing ads opposing Platner</span>'+
+      '<span class="k">Receipts</span><span>Each of the six purchases links to its actual FEC filing in the <a href="#platner-fec-filings">table above</a></span></div>'}
+  };
+  var dlg=document.getElementById("fmodal"),dt=document.getElementById("fmodal-title"),db=document.getElementById("fmodal-body");
+  var info=document.getElementById("flowinfo");
+  var canModal=dlg&&typeof dlg.showModal==="function";
+  document.getElementById("fmodal-close").addEventListener("click",function(){dlg.close()});
+  dlg.addEventListener("click",function(e){if(e.target===dlg)dlg.close()});
+  [].slice.call(document.querySelectorAll(".fnode[data-k]")).forEach(function(btn){
+    btn.addEventListener("click",function(){
+      var c=CARDS[btn.getAttribute("data-k")];if(!c)return;
+      [].slice.call(document.querySelectorAll(".fnode.active")).forEach(function(a){a.classList.remove("active")});
+      btn.classList.add("active");
+      if(canModal){dt.textContent=c.t;db.innerHTML=c.b;dlg.showModal();}
+      else if(info){info.innerHTML="<strong>"+c.t+"</strong> "+c.b;}
+    });
+    // make interactivity explicit on every clickable box
+    if(!btn.classList.contains("mystery")){
+      var h=document.createElement("span");h.className="hint2";h.textContent="+ details";btn.appendChild(h);
+    }
+  });
+
+  // filing preview cards (committee spotlight)
+  var dpanel=document.getElementById("docpanel");
+  if(dpanel){
+    var dpAmt=document.getElementById("dp-amt"),dpDate=document.getElementById("dp-date"),dpOpen=document.getElementById("dp-open");
+    [].slice.call(document.querySelectorAll(".doccard")).forEach(function(card){
+      card.addEventListener("click",function(){
+        var already=card.classList.contains("active");
+        [].slice.call(document.querySelectorAll(".doccard.active")).forEach(function(a){a.classList.remove("active")});
+        if(already){dpanel.classList.remove("open");return;}
+        card.classList.add("active");
+        dpAmt.textContent=card.getAttribute("data-amt");
+        dpDate.textContent=card.getAttribute("data-date");
+        dpOpen.href="https://docquery.fec.gov/cgi-bin/fecimg/?"+card.getAttribute("data-fid");
+        dpanel.classList.add("open");
+        dpanel.scrollIntoView({block:"nearest",behavior:"smooth"});
+      });
+    });
+  }
+})();
+</script>
+<script data-name="BMC-Widget" data-cfasync="false"
+  src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+  data-id="danny.thetatteredrose"
+  data-description="Support this work"
+  data-message="Independent, receipts-linked research takes time. If this page is useful to you, you can support it right here — thank you."
+  data-color="#3D5A73"
+  data-position="Right"
+  data-x_margin="18"
+  data-y_margin="18"></script>
 </body>
 </html>
