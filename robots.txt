@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://daguilar0123.github.io/graham-platner-campaign-finance/sitemap.xml
