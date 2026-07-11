@@ -1,0 +1,29 @@
+{
+  "file": "spending-animated.gif",
+  "title": "Spending race — animated counters",
+  "description": "Looping animation: two horizontal bars race from $0 with live dollar counters; the “spent opposing Platner” bar fills the frame while “spent supporting Platner” barely registers; ends on a $34 : $1 reveal.",
+  "alt_text": "Animation: two bars grow from zero with live dollar counters. The red bar, labeled spent opposing Platner, races to $11,077,173 and fills the width; the green bar, labeled spent supporting Platner, stays tiny at $323,426. It ends revealing the ratio $34 to $1.",
+  "width_px": 720,
+  "height_px": 720,
+  "format": "GIF (animated, loops)",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026).",
+  "accessibility_note": "First frame is near-empty (bars at $0); pair with a static PNG where a meaningful preview frame is required."
+}

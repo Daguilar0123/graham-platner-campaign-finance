@@ -1,0 +1,29 @@
+{
+  "file": "donut-97-animated.gif",
+  "title": "97¢ of every opposition dollar — animated donut",
+  "description": "Looping animation: a donut chart sweeps from 0 to 97% with a live cent counter, showing that 97¢ of every dollar spent opposing Platner came through one super PAC — Pine Tree Results PAC, $10,723,548 of $11,077,173.",
+  "alt_text": "Animation: a donut chart fills red from zero to 97 percent while a counter climbs to 97 cents, labeled “of every opposition dollar · one super PAC.” Ends: Pine Tree Results PAC, $10,723,548 of $11,077,173.",
+  "width_px": 720,
+  "height_px": 720,
+  "format": "GIF (animated, loops)",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026).",
+  "accessibility_note": "First frame shows an empty ring at 0¢; pair with a static PNG where a meaningful preview frame is required."
+}

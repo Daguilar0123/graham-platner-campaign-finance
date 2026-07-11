@@ -1,0 +1,29 @@
+{
+  "file": "trail-goes-dark-animated.gif",
+  "title": "The spending is public. The source isn’t. — animated money trail",
+  "description": "Looping animation of the dark-money trail: Step 1 (PAC spent $10.7M opposing a candidate — filed) and Step 2 (a nonprofit gave that PAC $3,000,000 — named in the PAC’s ledger) appear with green checks; the arrow then drops into a black Step 3 void with a pulsing “?” — “Who gave the nonprofit the $3M? No filing exists — none is required.”",
+  "alt_text": "Animation titled “The spending is public. The source isn’t.” Two green-outlined boxes appear with checkmarks: a super PAC spent $10.7 million opposing a candidate, every receipt on record; a nonprofit gave that PAC $3,000,000, named in the PAC’s ledger. An arrow leads to a black box with a pulsing question mark: who gave the nonprofit the $3 million — no filing exists, none is required.",
+  "width_px": 720,
+  "height_px": 720,
+  "format": "GIF (animated, loops)",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026).",
+  "accessibility_note": "First frame shows only the title; pair with section-hidden-money-1600x900.png where a meaningful preview frame is required."
+}

@@ -1,0 +1,28 @@
+{
+  "file": "section-hidden-money-1600x900.png",
+  "title": "The spending is public. The source isn’t.",
+  "description": "Section illustration of the dark-money trail: the two-line pull quote, then three boxes — two green-outlined with checkmarks (PAC spent $10.7M opposing a candidate — filed; nonprofit gave $3M to that PAC — filed) and a black void box with a large “?” and “no filing exists.”",
+  "alt_text": "Dark graphic with the serif pull quote “The spending is public. The source isn’t.” Three boxes in a row: two outlined in green with checkmarks — PAC spent $10.7M opposing a candidate; nonprofit gave $3M to that PAC — and a third solid-black box with a large cream question mark and the words “no filing exists.”",
+  "width_px": 1600,
+  "height_px": 900,
+  "format": "PNG",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026)."
+}

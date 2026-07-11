@@ -1,0 +1,28 @@
+{
+  "file": "og-1200x630.png",
+  "title": "What Can $11 Million Buy? — $34 : $1",
+  "description": "Open Graph / link-preview card for the campaign-finance ledger. A giant $34 : $1 ratio — $34 spent opposing Graham Platner for every $1 supporting him — above a proportional bar that is nearly all red with a thin green sliver.",
+  "alt_text": "Dark graphic titled “What Can $11 Million Buy?” A large ratio reads $34 to $1 — $34 spent opposing, $1 spent supporting. A bar below is nearly all red with a thin green sliver. Text: $11,077,173 opposing, $323,426 supporting, every FEC filing linked.",
+  "width_px": 1200,
+  "height_px": 630,
+  "format": "PNG",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026)."
+}

@@ -1,0 +1,28 @@
+{
+  "file": "infographic-money-pipeline-1200x2260.png",
+  "title": "Who paid for the $11 million spent against Graham Platner?",
+  "description": "Tall infographic of the funding pipeline, from the PAC’s own FEC donor ledger. Left: money whose original source is hidden — Stronger America, Inc. ($3,000,000, a 501(c)(4) whose own funders have no filing) and Lexington Fund ($1,000,000, funders undisclosed). Right: ten named donors with amounts and dates (press-reported entries flagged). Both flow into Pine Tree Results PAC (raised $16,099,657), then to sole vendor SRCP Media ($10,723,548), ending with the six FEC Form 24 receipts, each declaring OPPOSE: PLATNER, GRAHAM. Notes that the full interactive version with every receipt is at the site.",
+  "alt_text": "Tall dark infographic titled “Who paid for the $11 million spent against Graham Platner?” Two columns: “Money whose original source is hidden” shows Stronger America, Inc. giving $3,000,000 with the note “Who funded it? No filing exists,” and Lexington Fund giving $1,000,000 with funders undisclosed. “Money with a name attached” lists ten donors from Kenneth Griffin at $2.5 million down to Alex Karp at $100,000. Arrows converge on a red box, Pine Tree Results PAC, raised $16,099,657, which points to SRCP Media, paid $10,723,548. Below are six receipt cards, each stamped OPPOSE: PLATNER, GRAHAM, totaling the six ad buys. Footer points to the full interactive ledger site.",
+  "width_px": 1200,
+  "height_px": 2260,
+  "format": "PNG",
+  "creator": "Daniel Ismael Aguilar",
+  "creator_url": "https://grownfromconcrete.org",
+  "copyright": "© 2026 Daniel Ismael Aguilar",
+  "credit": "Daniel Ismael Aguilar · grownfromconcrete.org",
+  "copyright_year": 2026,
+  "date_created": "2026-07-10",
+  "source_page": "https://daguilar0123.github.io/graham-platner-campaign-finance/",
+  "keywords": [
+    "Graham Platner",
+    "campaign finance",
+    "independent expenditures",
+    "Maine Senate 2026",
+    "FEC filings",
+    "super PAC",
+    "dark money",
+    "Pine Tree Results PAC",
+    "outside money"
+  ],
+  "usage_note": "Data visualization compiled from public FEC filings and cited press reporting. Figures: $11,077,173 spent opposing Graham Platner vs. $323,426 supporting (FEC Schedule E, deduplicated, Oct 2025 – Jul 8, 2026)."
+}
