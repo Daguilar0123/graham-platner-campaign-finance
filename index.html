@@ -339,6 +339,23 @@ html:not(.js) .secnav{display:none}
 </style>
 </head>
 <body>
+<style>
+nav.projnav{position:sticky;top:0;z-index:30;background:var(--ground);border-bottom:1px solid var(--hair)}
+nav.projnav .pn-wrap{max-width:1060px;margin:0 auto;padding:0 20px;display:flex;gap:2px;flex-wrap:wrap;align-items:center}
+nav.projnav .pn-brand{font-family:var(--mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);padding:10px 14px 10px 0;border-right:1px solid var(--hair);margin-right:6px}
+nav.projnav a{font-size:13px;color:var(--muted);text-decoration:none;padding:10px 11px;border-bottom:2px solid transparent}
+nav.projnav a:hover{color:var(--ink)}
+nav.projnav a[aria-current="page"]{color:var(--ink);border-bottom-color:var(--accent);font-weight:600}
+</style>
+<nav class="projnav" aria-label="The Platner Record project">
+  <div class="pn-wrap">
+    <span class="pn-brand">The Platner Record</span>
+    <a href="https://daguilar0123.github.io/graham-platner-the-record/">The Record</a>
+    <a href="https://daguilar0123.github.io/graham-platner-the-record/fifield-kavanaugh.html">Fifield–Kavanaugh File</a>
+    <a href="https://daguilar0123.github.io/graham-platner-the-record/the-questions.html">The Questions</a>
+    <a href="./" aria-current="page">The Money</a>
+  </div>
+</nav>
 <div class="wrap">
 
 <header>
